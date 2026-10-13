@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "distracted-driving-analysis"
+version = "0.1.0"
+description = "Computer vision research and evaluation utilities for distracted-driving detection"
+requires-python = ">=3.9"
+dependencies = ["scikit-learn>=1.2"]
+
+[project.optional-dependencies]
+dev = ["pytest>=7"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
